@@ -1,0 +1,13 @@
+.visible-mobile {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.visible-desktop {
+    display: block;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }

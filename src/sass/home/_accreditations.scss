@@ -1,0 +1,31 @@
+.accreditations {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  .accreditations__title{
+    font-family: $Ubuntu;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: $gray;
+    margin-bottom: 30px;
+  }
+  .accreditations__slide {
+    .swiper-container {
+      .swiper-button-prev {
+        display: none;
+        @media (max-width: 991px) {
+          display: block;
+        }
+      }
+      .swiper-button-next {
+        display: none;
+        @media (max-width: 991px) {
+          display: block;
+        }
+      }
+      .accreditations__image {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

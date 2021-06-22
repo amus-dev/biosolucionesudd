@@ -1,0 +1,18 @@
+.examenes {
+  margin-bottom: 30px;
+  .examen__btn {
+    color: $blue;
+    font-family: $Ubuntu;
+    font-size: 1rem;
+  }
+  .examen__description {
+    font-family: $Ubuntu;
+    color: $gray;
+    line-height: 30px;
+    p {
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d53311.38041331581!2d-70.516279!3d-33.372077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29668b3758bad92c!2sLaboratorio%20Cl%C3%ADnico%20BioSoluciones%20UDD!5e0!3m2!1sen!2scl!4v1623956880711!5m2!1sen!2scl" class="ubicacion__map" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

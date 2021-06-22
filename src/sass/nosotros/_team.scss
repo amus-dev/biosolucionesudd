@@ -1,0 +1,65 @@
+.team {
+  .team__row {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &:nth-child(even) {
+      background-color: $grayLight;
+    }
+    .team__title {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $gray;
+      font-family: $Ubuntu;
+      margin-bottom: 40px;
+    }
+    .team__card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      @media (max-width: 991px) {
+        margin-bottom: 2rem;
+      }
+      .card__image {
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(40%);
+        transition: filter 0.5s ease-in-out;
+        width: 100%;
+        &:hover,
+        &:focus,
+        &:target {
+          filter: brightness(100%);
+        }
+      }
+      .card__body {
+        bottom: 0rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: absolute;
+        width: 100%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        .card__name {
+          font-weight: 700;
+          font-family: $Ubuntu;
+          color: $white;
+        }
+        .card__position {
+          font-family: $Ubuntu;
+          color: $white;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.contact {
+  position: relative;
+  .contact__background {
+    position: relative;
+    background-image: url(../images/bg-contacto.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 431px;
+    width: 100%;
+    filter: brightness(40%);
+  }
+  .contact__contain {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .contact__title {
+      font-family: $Ubuntu;
+      color: $white;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.formContainer {
+  .formContainer__tile {
+    font-family: $Ubuntu;
+    color: $gray;
+    font-size: 1.5rem;
+  }
+  .formContainer__form {
+    margin-top: 30px;
+    .form__block {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      max-width: 768px;
+      margin-bottom: 1rem;
+      .form__label {
+        font-family: $Ubuntu;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $gray;
+        span {
+          color: red;
+        }
+      }
+      .form__input {
+        margin-top: 10px;
+        font-family: $Ubuntu;
+        color: $gray;
+        &.error {
+          border: 1px solid red;
+        }
+      }
+      .form__area {
+        margin-top: 10px;
+        font-family: $Ubuntu;
+        color: $gray;
+        &.error {
+          border: 1px solid red;
+        }
+      }
+      .form-check {
+        padding-left: 0px;
+        .form-check-input {
+          margin: 0px;
+          padding: 0px;
+        }
+        .form-check-label {
+          font-family: $Ubuntu;
+          color: $gray;
+          font-size: 1rem;
+          padding-left: 10px;
+        }
+      }
+      .form-switch {
+        .form-check-label {
+          font-family: $Ubuntu;
+          color: $gray;
+          font-size: 1rem;
+        }
+      }
+      .btnContact {
+        font-family: $Ubuntu;
+        background-color: $blue;
+        transition: background-color 0.5s ease-in-out;
+        &:hover {
+          background-color: $blueDark;
+        }
+      }
+      .alert {
+        font-family: $Ubuntu;
+        font-size: 1rem;
+        &.hidden {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}

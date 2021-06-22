@@ -1,0 +1,48 @@
+.menu {
+  background-color: $blue;
+  .navbar {
+    @media (max-width: 330px) {
+      justify-content: flex-end;
+    }
+    .menu__logo {
+      width: 200px;
+      height: 43px;
+      background-size: cover;
+      filter: brightness(0) invert(1);
+      @media (max-width: 330px) {
+        display: none;
+      }
+    }
+    .navbar-toggler {
+      border: none;
+      &:focus {
+        color: transparent;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $white;
+          text-transform: uppercase;
+          font-family: $Ubuntu;
+          font-weight: 500;
+          transition: all 0.5s ease-in-out;
+          font-size: 15px;
+          &:hover {
+            color: rgba(38, 35, 35, 0.886);
+          }
+          &.active {
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+          }
+        }
+        .dropdown-menu {
+          li {
+            .dropdown-item {
+              font-family: $Ubuntu;
+            }
+          }
+        }
+      }
+    }
+  }
+}

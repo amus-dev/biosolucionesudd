@@ -1,0 +1,57 @@
+.ubicacion {
+  .ubicacion__title {
+    font-family: $Ubuntu;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $gray;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .ubicacion__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: $grayLight;
+    max-width: 768px;
+    padding: 2rem;
+    .box__title {
+      font-size: 1.5rem;
+      color: $gray;
+      font-family: $Ubuntu;
+      font-weight: 700;
+    }
+    hr {
+      display: block;
+      width: 100%;
+    }
+
+    span {
+      font-size: 1rem;
+      color: $gray;
+      font-family: $Ubuntu;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    a {
+      font-size: 1rem;
+      color: $gray;
+      font-family: $Ubuntu;
+      font-weight: 500;
+      margin-bottom: 20px;
+      text-decoration: none;
+      transition: color 0.5s ease-in-out;
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      color: $gray;
+      font-family: $Ubuntu;
+      font-weight: 500;
+    }
+  }
+}

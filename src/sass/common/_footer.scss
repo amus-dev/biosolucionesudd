@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .footer_menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    border-bottom: 1px solid $grayLight;
+    padding-bottom: 2rem;
+    @media (max-width: 991px) {
+        display: none;
+    }
+    li {
+      font-family: $Ubuntu;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 16px;
+      a {
+        text-decoration: none;
+        color: $blue;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+  .footer__logo{
+      max-width: 250px;
+  }
+}
