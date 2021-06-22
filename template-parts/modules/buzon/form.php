@@ -1,7 +1,7 @@
 <section class="formContainer needs-validation">
      <div class="container">
           <h2 class="formContainer__tile">Formulario de reclamo, felicitaciones o sugerencias</h2>
-          <form class="formContainer__form" id="formContact" novalidate>
+          <form class="formContainer__form" id="formContact">
                <div class="form__block">
                     <label class="form__label" for="inputName">Nombre del usuario: <span>*</span></label>
                     <input type="text" name="inputName" id="inputName" class="form__input form-control" required>
@@ -82,9 +82,7 @@
                     <button type="submit" class="btn btn-primary btnContact" id="btnSendContact">Enviar</button>
                </div>
                <div class="form__block">
-                    <div class="alert hidden" role="alert" id="messageForm">
-                         Revise los campos marcados en rojo.
-                    </div>
+                    <div class="alert hidden" role="alert" id="messageForm"></div>
                </div>
                <form-functions></form-functions>
           </form>
