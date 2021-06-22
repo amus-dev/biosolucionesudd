@@ -14,6 +14,6 @@ const user = {
   authorize: Boolean,
 };
 
-const BASE_PATH = `http://localhost:8888/biosoluciones/wp-content/themes/biosolucionesudd/server/User/save.php`;
+const BASE_PATH = `https://biosoluciones.cl/wp-content/themes/biosolucionesudd/server/User/save.php`;
 
 export { user, BASE_PATH };
