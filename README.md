@@ -1,5 +1,7 @@
 # Biosoluciones UDD
 
+<img src="https://biosoluciones.cl/wp-content/themes/biosoluciones/dist/img/logo-white.png"/>
+
 Construcción tema personalizado de WordPress para el cliente Biosoluciones UDD.
 
 ## Installation
