@@ -1,4 +1,4 @@
-import { user, BASE_PATH } from "./const";
+import { user, BASE_PATH } from "../utils/const";
 import { validateRut } from "@fdograph/rut-utilities";
 const isemail = require("email-format-check");
 
@@ -9,17 +9,21 @@ const SET_CAMPS_USER = () => {
   user.comuna = document.getElementById("inputneighborhood").value;
   user.phone = document.getElementById("inputPhone").value;
   user.emailUser = document.getElementById("inputMail").value;
-  user.isPacient = GET_VALUE_RADIOBUTTON(document.getElementsByName("isPacient"));
+  user.isPacient = GET_VALUE_RADIOBUTTON(
+    document.getElementsByName("isPacient")
+  );
   user.namePacient = document.getElementById("inputNamePacient").value;
   user.rutPacient = document.getElementById("inputRutPacient").value;
-  user.typeReclamo = GET_VALUE_RADIOBUTTON(document.getElementsByName("typeReclamo"));
+  user.typeReclamo = GET_VALUE_RADIOBUTTON(
+    document.getElementsByName("typeReclamo")
+  );
   user.descriptionReclamo = document.getElementById("inputDescription").value;
   user.reclamoPeticion = document.getElementById("inputPeticion").value;
-  user.authorize = document.getElementById("inputAutorize").checked === true ? true : false;
+  user.authorize =
+    document.getElementById("inputAutorize").checked === true ? true : false;
 };
 
 const VALIDATE_SHOW_ALERTS = () => {
-  const messageForm = document.getElementById("messageForm");
   !user.nameUser
     ? document.getElementById("inputName").classList.add("error")
     : document.getElementById("inputName").classList.remove("error");
@@ -48,38 +52,64 @@ const VALIDATE_SHOW_ALERTS = () => {
     ? document.getElementById("inputDescription").classList.add("error")
     : document.getElementById("inputDescription").classList.remove("error");
 
-  if(user.nameUser && validateRut(user.rutUser)=== true && user.address && user.comuna && user.phone && isemail(user.emailUser) && user.namePacient && validateRut(user.rutPacient)===true && user.descriptionReclamo){
+  if (
+    user.nameUser &&
+    validateRut(user.rutUser) === true &&
+    user.address &&
+    user.comuna &&
+    user.phone &&
+    isemail(user.emailUser) &&
+    user.namePacient &&
+    validateRut(user.rutPacient) === true &&
+    user.descriptionReclamo
+  ) {
     return true;
-  }
-  else{
+  } else {
     const messageForm = document.getElementById("messageForm");
     messageForm.classList.remove("alert-success");
     messageForm.classList.add("alert-danger");
     messageForm.classList.remove("hidden");
-    messageForm.innerText= "Revise los campos marcados en rojo."
+    messageForm.innerText = "Revise los campos marcados en rojo.";
   }
 };
 
-const SEND_FORM = async () =>{
+const SEND_FORM = async () => {
   const url = `${BASE_PATH}`;
   const params = {
     method: "POST",
-    body: JSON.stringify({data: user}),
+    body: JSON.stringify({ data: user }),
     headers: {
       "Content-Type": "application/json",
     },
   };
   const response = await fetch(url, params);
-  if(response.status === 200){
+  if (response.status === 200) {
     const messageForm = document.getElementById("messageForm");
     messageForm.classList.remove("alert-danger");
     messageForm.classList.add("alert-success");
     messageForm.classList.remove("hidden");
-    messageForm.innerText= "Registrado finalizado.";
-    const formContact = document.getElementById("formContact")
+    messageForm.innerText = "Registrado finalizado.";
+    const formContact = document.getElementById("formContact");
     formContact.reset();
   }
-}
+};
+
+const SET_INPUTS_PACIENT = (value) => {
+  const isPacient = value === "true";
+  isPacient ? UPDATE_INPUTS() : CLEAR_INPUTS_PACIENT();
+};
+
+const UPDATE_INPUTS = () => {
+  document.getElementById("inputNamePacient").value =
+    document.getElementById("inputName").value;
+  document.getElementById("inputRutPacient").value =
+    document.getElementById("inputRut").value;
+};
+
+const CLEAR_INPUTS_PACIENT = () => {
+  document.getElementById("inputNamePacient").value = "";
+  document.getElementById("inputRutPacient").value = "";
+};
 
 const GET_VALUE_RADIOBUTTON = (radioButton) => {
   for (let i = 0; i < radioButton.length; i++) {
@@ -89,4 +119,4 @@ const GET_VALUE_RADIOBUTTON = (radioButton) => {
   }
 };
 
-export { SET_CAMPS_USER, VALIDATE_SHOW_ALERTS, SEND_FORM };
+export { SET_CAMPS_USER, VALIDATE_SHOW_ALERTS, SEND_FORM, SET_INPUTS_PACIENT };

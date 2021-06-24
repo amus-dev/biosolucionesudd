@@ -32,7 +32,7 @@
                <div class="form__block">
                     <label class="form__label mb-4">¿Es ud. el paciente?: <span>*</span></label>
                     <div class="form-check">
-                         <input class="form-check-input" type="radio" name="isPacient" id="optionSi" value="true" checked />
+                         <input class="form-check-input" type="radio" name="isPacient" id="optionSi" value="true" />
                          <label class="form-check-label" for="optionSi">Sí</label>
                     </div>
                     <div class="form-check">
