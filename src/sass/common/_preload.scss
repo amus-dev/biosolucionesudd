@@ -16,6 +16,7 @@
     transition: transform ease-out 0.3s;
   }
   .preload__logo {
+    max-width: 500px;
     animation: scalePulse 3s infinite;
   }
 }
