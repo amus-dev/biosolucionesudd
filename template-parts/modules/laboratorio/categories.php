@@ -8,7 +8,7 @@
                     <div class="col-12 col-md-4">
                          <div class="categories__card">
                               <div class="categories__card-head">
-                                   <img src="http://localhost:8888/biosoluciones/wp-content/uploads/2021/06/image-nosotros-cover.jpg" class="img-fluid">
+                                   <img src="https://biosoluciones.cl/wp-content/uploads/2021/06/image-nosotros-cover.jpg" class="img-fluid">
                               </div>
                               <div class="categories__card-body">
                                    <h5 class="categories__card-title"><?= $postChild->post_title; ?></h5>
