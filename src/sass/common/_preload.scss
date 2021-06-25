@@ -19,6 +19,9 @@
   .preload__logo {
     max-width: 500px;
     animation: scalePulse 3s infinite;
+    @media (max-width: 600px) {
+      max-width: 250px;
+    }
   }
 }
 
