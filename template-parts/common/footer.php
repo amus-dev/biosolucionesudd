@@ -25,7 +25,7 @@
         </ul>
         <div class="footer__logo">
             <a href="<?= get_site_url(); ?>">
-                <img src="<?= get_template_directory_uri(); ?>/dist/img/logo-black.jpg" class="img-fluid" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/img/logo.png" class="img-fluid" />
             </a>
         </div>
     </div>
