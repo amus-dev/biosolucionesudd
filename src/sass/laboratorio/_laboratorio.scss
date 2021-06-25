@@ -18,17 +18,17 @@
     }
     &-body {
       padding: 1rem;
+      p {
+        @include fontCard;
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+        font-weight: 400;
+      }
     }
     &-title {
       @include fontCard;
       font-weight: 700;
       font-size: 1.2rem;
-    }
-    &-description {
-      @include fontCard;
-      font-size: 0.8rem;
-      line-height: 0.9rem;
-      font-weight: 400;
     }
     &-btn {
       display: block;
