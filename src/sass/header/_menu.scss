@@ -2,15 +2,24 @@
   position: fixed;
   z-index: 1;
   width: 100%;
-  background-color: $blue;
+  background-color: $white;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  &.active {
+    box-shadow: -1px 5px 14px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 5px 14px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 5px 14px -1px rgba(0, 0, 0, 0.75);
+  }
   .navbar {
     @media (max-width: 330px) {
       justify-content: flex-end;
     }
     .menu__logo {
-      width: 200px;
-      height: 43px;
+      width: 270px;
+      height: 90px;
       background-size: cover;
+      background-position: center;
       @media (max-width: 330px) {
         display: none;
       }
@@ -21,26 +30,29 @@
         color: transparent;
       }
     }
-    .navbar-nav {
-      .nav-item {
-        .nav-link {
-          color: $white;
-          text-transform: uppercase;
-          font-family: $Ubuntu;
-          font-weight: 500;
-          transition: all 0.5s ease-in-out;
-          font-size: 15px;
-          &:hover {
-            color: rgba(38, 35, 35, 0.886);
+    .collapse {
+      justify-content: flex-end;
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $gray;
+            text-transform: uppercase;
+            font-family: $Ubuntu;
+            font-weight: 500;
+            transition: color 0.5s ease-in-out;
+            font-size: 15px;
+            &:hover {
+              color: $blue;
+            }
+            &.active {
+              border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+            }
           }
-          &.active {
-            border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
-          }
-        }
-        .dropdown-menu {
-          li {
-            .dropdown-item {
-              font-family: $Ubuntu;
+          .dropdown-menu {
+            li {
+              .dropdown-item {
+                font-family: $Ubuntu;
+              }
             }
           }
         }
