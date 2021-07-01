@@ -21,10 +21,11 @@
     .menu__logo {
       width: 270px;
       height: 90px;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
-      @media (max-width: 330px) {
-        display: none;
+      background-repeat: no-repeat;
+      @media (max-width: 400px) {
+        width: 200px;
       }
     }
     .navbar-toggler {
@@ -35,7 +36,9 @@
     }
     .navbar-collapse {
       justify-content: flex-end;
-      height: 90px;
+      @media (min-width: 991px) {
+        height: 90px;
+      }
       .navbar-nav {
         height: 100%;
         .nav-item {
@@ -53,6 +56,9 @@
             overflow-x: hidden;
             padding: 0px;
             margin-left: 2rem;
+            @media (max-width: 991px) {
+              padding-bottom: 1rem;
+            }
             &:hover {
               color: $violet;
               &::before {

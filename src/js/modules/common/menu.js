@@ -10,7 +10,6 @@ class Menu extends HTMLElement {
       top >= 130
         ? menuDom.classList.add("active")
         : menuDom.classList.remove("active");
-      console.log(top);
     });
   }
 }
