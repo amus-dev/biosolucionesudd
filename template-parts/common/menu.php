@@ -23,7 +23,7 @@
                                 <ul class="dropdown__menu">
                                     <?php foreach ($menu["sub_menu"] as $sub_menu) : ?>
                                         <li>
-                                            <a class="dropdown__menu-item" href="<?php echo ($sub_menu["link_site_external"] === "site") ? $sub_menu["link_site"] : $sub_menu["link_external"]; ?>" target="_blank"><?= $sub_menu["titulo"] ?></a>
+                                            <a class="dropdown__menu-item" href="<?php echo ($sub_menu["link_site_external"] === "site") ? $sub_menu["link_site"] : $sub_menu["link_external"]; ?>"><?= $sub_menu["titulo"] ?></a>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>
