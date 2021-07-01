@@ -1,0 +1,27 @@
+.top {
+  background-color: $violet;
+  @media (max-width: 991px) {
+    display: none;
+  }
+  .list {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    align-items: center;
+    height: 5vh;
+    &__element {
+      display: flex;
+      margin-right: 1rem;
+      text-decoration: none;
+      color: $white;
+      font-family: $Ubuntu;
+
+      &-text {
+        display: block;
+        width: 100%;
+        margin-left: 5px;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

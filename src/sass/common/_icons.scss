@@ -1,0 +1,22 @@
+@mixin default-icon {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 30px;
+}
+
+.ico-tel {
+  background-image: url("../images/icons/phone-call.svg");
+  @include default-icon;
+}
+
+.ico-mail {
+  background-image: url("../images/icons/email.svg");
+  @include default-icon;
+}
+
+.ico-pin {
+  background-image: url("../images/icons/pin.svg");
+  @include default-icon;
+}
