@@ -15,14 +15,15 @@
                                 <a class="nav-link" aria-current="page" href="<?php echo ($menu["link_site_external"] === "site") ? $menu["link_site"] : $menu["link_external"]; ?>"><?= $menu["title"] ?></a>
                             </li>
                         <?php elseif ($menu["type_menu"] === "submenu") : ?>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li class="nav-item itemCollapse">
+                                <a class="nav-link" href="<?= $menu["link_title"] ?>" id="navbarDropdown" r>
                                     <?= $menu["title"] ?>
+                                    <i class="arrow" id="arrowMenu"></i>
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <ul class="dropdown__menu">
                                     <?php foreach ($menu["sub_menu"] as $sub_menu) : ?>
                                         <li>
-                                            <a class="dropdown-item" href="<?php echo ($sub_menu["link_site_external"] === "site") ? $sub_menu["link_site"] : $sub_menu["link_external"]; ?>" target="_blank"><?= $sub_menu["titulo"] ?></a>
+                                            <a class="dropdown__menu-item" href="<?php echo ($sub_menu["link_site_external"] === "site") ? $sub_menu["link_site"] : $sub_menu["link_external"]; ?>" target="_blank"><?= $sub_menu["titulo"] ?></a>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>

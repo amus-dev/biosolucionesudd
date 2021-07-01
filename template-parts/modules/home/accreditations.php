@@ -1,6 +1,6 @@
 <section class="accreditations">
     <div class="container">
-        <h2 class="accreditations__title">Acreditaciones y calidad</h2>
+        <h2 class="accreditations__title">Acreditaciones</h2>
         <div class="accreditations__slide">
             <div class="swiper-container">
                 <div class="swiper-wrapper">

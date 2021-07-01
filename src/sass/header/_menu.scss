@@ -5,7 +5,9 @@
   background-color: $white;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $violet;
+  @media (min-width: 991px) {
+    border-bottom: 1px solid $violet;
+  }
   &.active {
     position: fixed;
     top: -10px;
@@ -14,6 +16,7 @@
     -moz-box-shadow: -1px 5px 14px -1px rgba(0, 0, 0, 0.75);
   }
   .navbar {
+    position: inherit;
     padding: 0px;
     @media (max-width: 330px) {
       justify-content: flex-end;
@@ -42,6 +45,7 @@
       .navbar-nav {
         height: 100%;
         .nav-item {
+          position: initial;
           .nav-link {
             position: relative;
             display: flex;
@@ -52,12 +56,23 @@
             font-family: $Ubuntu;
             font-weight: 500;
             transition: color 0.5s ease-in-out;
-            font-size: 15px;
+            font-size: 0.8rem;
             overflow-x: hidden;
             padding: 0px;
             margin-left: 2rem;
             @media (max-width: 991px) {
               padding-bottom: 1rem;
+            }
+            @media (min-width: 991px) {
+              &::before {
+                content: " ";
+                position: absolute;
+                height: 0px;
+                width: 100%;
+                background-color: $violet;
+                bottom: 0;
+                transition: height 0.2s ease-in-out;
+              }
             }
             &:hover {
               color: $violet;
@@ -65,25 +80,79 @@
                 height: 3px;
               }
             }
+            &::after {
+              display: none;
+            }
             &.active {
               border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
             }
-            &::before {
-              content: " ";
+
+            .arrow {
+              visibility: hidden;
               position: absolute;
-              height: 0px;
-              width: 100%;
-              background-color: $violet;
-              bottom: 0;
-              transition: height 0.2s ease-in-out;
-            }
-          }
-          .dropdown-menu {
-            li {
-              .dropdown-item {
-                font-family: $Ubuntu;
+              border: solid $gray;
+              border-width: 0 3px 3px 0;
+              display: inline-block;
+              padding: 3px;
+              right: 1rem;
+              transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+              transition: transform 0.5s ease-in-out;
+              &.open {
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+              }
+              @media (max-width: 991px) {
+                visibility: visible;
               }
             }
+          }
+          .dropdown__menu {
+            position: absolute;
+            left: 0;
+            display: flex;
+            background-color: $white;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 0px;
+            visibility: hidden;
+            border-top: 1px solid $violet;
+            @media (max-width: 991px) {
+              border-top: none;
+              position: relative;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              margin-left: 3rem;
+              width: auto;
+            }
+            li {
+              .dropdown__menu-item {
+                font-family: $Ubuntu;
+                text-decoration: none;
+                color: $gray;
+                transition: color 0.5s ease-in-out;
+                font-size: 0.8rem;
+                &:hover {
+                  color: $violet;
+                }
+              }
+            }
+          }
+        }
+        .itemCollapse {
+          @media (min-width: 991px) {
+            &:hover {
+              .dropdown__menu {
+                height: 10vh;
+                visibility: visible;
+              }
+            }
+          }
+          .visible {
+            height: 10vh;
+            visibility: visible;
           }
         }
       }

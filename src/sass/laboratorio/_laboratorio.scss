@@ -18,6 +18,10 @@
     }
     &-body {
       padding: 1rem;
+      min-height: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       p {
         @include fontCard;
         font-size: 0.8rem;
@@ -29,6 +33,13 @@
       @include fontCard;
       font-weight: 700;
       font-size: 1.2rem;
+      text-align: center;
+      text-decoration: none;
+      transition: color 0.5s ease-in-out;
+      width: 100%;
+      &:hover {
+        color: $violet;
+      }
     }
     &-btn {
       display: block;

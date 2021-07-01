@@ -11,9 +11,11 @@
                                    <img src="https://biosoluciones.cl/wp-content/uploads/2021/06/image-nosotros-cover.jpg" class="img-fluid">
                               </div>
                               <div class="categories__card-body">
-                                   <h5 class="categories__card-title"><?= $postChild->post_title; ?></h5>
-                                   <p class="categories__card-description"><?= $postChild->post_content; ?></p>
-                                   <a href="<?= $postChild->guid; ?>" class="categories__card-btn">Ver más</a>
+                                   <!-- <h5 class="categories__card-title"><?= $postChild->post_title; ?></h5> -->
+                                   <!-- <p class="categories__card-description"><?= $postChild->post_content; ?></p> -->
+                                   <a href="<?= $postChild->guid; ?>" class="categories__card-title">
+                                        <?= $postChild->post_title; ?>
+                                   </a>
                               </div>
                          </div>
                     </div>
