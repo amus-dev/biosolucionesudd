@@ -1,0 +1,31 @@
+.boxServices {
+  margin-top: 3rem;
+  &__image {
+    display: block;
+    margin-left: auto;
+    @media (max-width: 991px) {
+      margin-right: auto;
+    }
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media (max-width: 991px) {
+      margin-top: 30px;
+      align-items: center;
+    }
+    &-title {
+      font-size: 1.5rem;
+      color: $gray;
+      font-family: $Ubuntu;
+      margin-bottom: 10px;
+    }
+    &-description {
+      font-size: 1rem;
+      color: $gray;
+      font-family: $Ubuntu;
+    }
+  }
+}

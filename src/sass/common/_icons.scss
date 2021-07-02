@@ -20,3 +20,8 @@
   background-image: url("../images/icons/pin.svg");
   @include default-icon;
 }
+
+.ico-search {
+  background-image: url("../images/icons/search.svg");
+  @include default-icon;
+}
