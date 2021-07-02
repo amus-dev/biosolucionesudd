@@ -1,0 +1,44 @@
+@mixin font-alert {
+  color: $white;
+  font-family: $Ubuntu;
+  font-size: 1rem;
+}
+
+.alertCovid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $pink;
+  height: 10vh;
+  transition: height 0.3s ease-in-out;
+  @media (max-width: 460px) {
+    flex-direction: column-reverse;
+  }
+  &__link {
+    @include font-alert;
+    transition: color 0.5s ease-in-out;
+    text-decoration: none;
+    &:hover {
+      color: $violet;
+    }
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+    font-size: 0.6rem;
+    color: $white;
+    font-family: $Ubuntu;
+    padding-left: 3rem;
+    transition: color 0.5s ease-in-out;
+    &:hover {
+      color: $violet;
+    }
+    @media (max-width: 460px) {
+      display: none;
+    }
+  }
+  &.not-visible {
+    height: 0px;
+  }
+}

@@ -5,10 +5,11 @@
                <?php $all_wp_pages = $query->query(array('post_type' => 'page')); ?>
                <?php $postChilds = get_page_children($post->ID, $all_wp_pages); ?>
                <?php foreach ($postChilds as $postChild) : ?>
+                    <?php $imageCover = get_field("cover_image", $postChild->ID) ?>
                     <div class="col-12 col-md-4">
                          <div class="categories__card">
                               <div class="categories__card-head">
-                                   <img src="https://biosoluciones.cl/wp-content/uploads/2021/06/image-nosotros-cover.jpg" class="img-fluid">
+                                   <img src="<?= $imageCover["url"]; ?>" class="img-fluid">
                               </div>
                               <div class="categories__card-body">
                                    <!-- <h5 class="categories__card-title"><?= $postChild->post_title; ?></h5> -->

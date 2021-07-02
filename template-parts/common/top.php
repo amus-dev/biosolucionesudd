@@ -16,7 +16,7 @@
                <li>
                     <a href="javascript:void(0);" class="list__element">
                          <i class="ico-pin"></i>
-                         <p class="list__element-text">Av. Las Condes 12348</p>
+                         <p class="list__element-text">Av. Las Condes 12348, Lo Barnechea</p>
                     </a>
                </li>
           </ul>

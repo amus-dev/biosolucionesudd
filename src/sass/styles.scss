@@ -6,6 +6,7 @@
 
 @import "./common/preload";
 @import "./header/top";
+@import "./common/alertCovid";
 @import "./header/menu";
 @import "./common/footer";
 
@@ -17,6 +18,9 @@
 @import "./home/about";
 @import "./home/contact";
 @import "./home/accreditations";
+
+//Slides
+@import "./slides/team";
 
 //Examenes
 @import "./examenes/examenes";

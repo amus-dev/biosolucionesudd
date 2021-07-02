@@ -1,4 +1,6 @@
 <section class="banner">
-    <img src="https://via.placeholder.com/1920x500" class="banner__image visible-desktop img-fluid">
-    <img src="https://via.placeholder.com/768x600" class="banner__image visible-mobile img-fluid">
+    <?php //$banner = get_field("banner"); 
+    ?>
+    <img src="<?= get_template_directory_uri(); ?>/dist/img/banner-home-desktop.jpg" class="banner__image visible-desktop img-fluid">
+    <img src="<?= get_template_directory_uri(); ?>/dist/img/banner-home-mobile.jpg" class="banner__image visible-mobile img-fluid">
 </section>

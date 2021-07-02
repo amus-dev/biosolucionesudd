@@ -14,4 +14,5 @@
 <body>
     <?php get_template_part('template-parts/common/preload'); ?>
     <?php get_template_part('template-parts/common/top'); ?>
+    <?php get_template_part('template-parts/common/blockCovid'); ?>
     <?php get_template_part('template-parts/common/menu'); ?>
