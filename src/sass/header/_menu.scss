@@ -5,6 +5,7 @@
   background-color: $white;
   display: flex;
   align-items: center;
+  height: 13vh;
   @media (min-width: 991px) {
     border-bottom: 1px solid $violet;
   }
@@ -22,11 +23,15 @@
       justify-content: flex-end;
     }
     .menu__logo {
-      width: 270px;
-      height: 90px;
+      height: 12vh;
+      width: 400px;
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @media (max-width: 991px) {
+        height: 90px;
+        width: 250px;
+      }
       @media (max-width: 400px) {
         width: 200px;
       }
@@ -133,7 +138,7 @@
                 text-decoration: none;
                 color: $gray;
                 transition: color 0.5s ease-in-out;
-                font-size: 0.8rem;
+                font-size: 1rem;
                 &:hover {
                   color: $violet;
                 }
@@ -145,13 +150,13 @@
           @media (min-width: 991px) {
             &:hover {
               .dropdown__menu {
-                height: 10vh;
+                height: 13vh;
                 visibility: visible;
               }
             }
           }
           .visible {
-            height: 10vh;
+            height: 13vh;
             visibility: visible;
           }
         }

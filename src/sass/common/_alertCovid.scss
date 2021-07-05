@@ -2,6 +2,9 @@
   color: $white;
   font-family: $Ubuntu;
   font-size: 1rem;
+  @media (max-width: 460px) {
+    font-size: 0.7rem;
+  }
 }
 
 .alertCovid {
@@ -10,7 +13,7 @@
   justify-content: center;
   align-items: center;
   background-color: $pink;
-  height: 10vh;
+  height: 5vh;
   transition: height 0.3s ease-in-out;
   @media (max-width: 460px) {
     flex-direction: column-reverse;
