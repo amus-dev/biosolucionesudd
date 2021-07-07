@@ -20,9 +20,7 @@
                     </a>
                </li>
                <li>
-                    <a href="javascript:void(0);" class="list__element">
-                         <i class="ico-search"></i>
-                    </a>
+                    <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
                </li>
           </ul>
      </div>
