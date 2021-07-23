@@ -1,6 +1,7 @@
 <section class="formContainer needs-validation">
      <div class="container">
-          <h2 class="formContainer__tile">Formulario de reclamo, felicitaciones o sugerencias</h2>
+          <iframe title="Embedded Wufoo Form" id="wufooFormzu6g88u0pa2u5v" class="wufoo-form-container" height="1477" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none;margin-top:3rem;" src="https://udesarrollo.wufoo.com/embed/zu6g88u0pa2u5v/def/embedKey=zu6g88u0pa2u5v851191&amp;entsource=wordpress&amp;referrer="><a href="https://udesarrollo.wufoo.com/forms/zu6g88u0pa2u5v/" title="html form">Fill out my Wufoo form!</a></iframe>
+          <!-- <h2 class="formContainer__tile">Formulario de reclamo, felicitaciones o sugerencias</h2>
           <form class="formContainer__form" id="formContact">
                <div class="form__block">
                     <label class="form__label" for="inputName">Nombre del usuario: <span>*</span></label>
@@ -85,6 +86,6 @@
                     <div class="alert hidden" role="alert" id="messageForm"></div>
                </div>
                <form-functions></form-functions>
-          </form>
+          </form> -->
      </div>
 </section>

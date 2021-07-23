@@ -14,9 +14,9 @@
                     </a>
                </li>
                <li>
-                    <a href="https://www.google.cl/maps/place/Av.+las+Condes+12348,+Lo+Barnechea,+Regi%C3%B3n+Metropolitana/@-33.3723914,-70.5196744,17z/data=!3m1!4b1!4m5!3m4!1s0x9662cbfafb7dee55:0xab832173b7362256!8m2!3d-33.3723914!4d-70.5174857" target="_blank" rel="noopener noreferrer" class="list__element">
+                    <a href="https://www.google.cl/maps/place/Universidad+del+Desarrollo/@-33.3716203,-70.5185299,17z/data=!4m13!1m7!3m6!1s0x9662cbfaea42cd05:0x8357a4a2ae6a002a!2sAv.+las+Condes+12438,+Lo+Barnechea,+Regi%C3%B3n+Metropolitana!3b1!8m2!3d-33.3716244!4d-70.5163602!3m4!1s0x9662cbfa812e2c53:0xef55f2228643aa4a!8m2!3d-33.3718975!4d-70.5160203" target="_blank" rel="noopener noreferrer" class="list__element">
                          <i class="ico-pin"></i>
-                         <p class="list__element-text">Av. Las Condes 12348, Lo Barnechea</p>
+                         <p class="list__element-text">Av. Las Condes 12438, Lo Barnechea</p>
                     </a>
                </li>
                <li>

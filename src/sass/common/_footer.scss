@@ -5,31 +5,55 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .footer_menu {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    border-bottom: 1px solid $grayLight;
-    padding-bottom: 2rem;
+  background-color: $violet;
+  margin-top: 5rem;
+  &__logo {
+    max-width: 100px;
     @media (max-width: 991px) {
-        display: none;
+      margin-bottom: 2rem;
     }
-    li {
+  }
+  &__title {
+    font-family: $Ubuntu;
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    @media (max-width: 991px) {
+      margin-bottom: 2rem;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
       font-family: $Ubuntu;
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 16px;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      .ico-pin,
+      .ico-tel,
+      .ico-mail {
+        margin-right: 10px;
+      }
       a {
         text-decoration: none;
-        color: $blue;
-        transition: all 0.5s ease-in-out;
+        color: $white;
+        transition: color 0.5s ease-in-out;
         &:hover {
-          color: $gray;
+          color: $pink;
         }
       }
     }
   }
-  .footer__logo{
-      max-width: 250px;
+  &__rrss {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    @media (max-width: 991px) {
+      justify-content: flex-start;
+    }
   }
 }

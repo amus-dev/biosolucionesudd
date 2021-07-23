@@ -29,6 +29,11 @@ if (function_exists('acf_add_options_page')) {
     acf_set_options_page_title(__('Theme Options'));
 
     acf_add_options_sub_page(array(
+        'page_title'     => 'Configuraciones Globales',
+        'menu_title'    => 'Global',
+    ));
+
+    acf_add_options_sub_page(array(
         'page_title'     => 'Configuración Menu',
         'menu_title'    => 'Menu',
     ));

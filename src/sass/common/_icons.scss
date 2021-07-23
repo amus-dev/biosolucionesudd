@@ -25,3 +25,21 @@
   background-image: url("../images/icons/search.svg");
   @include default-icon;
 }
+
+.ico-linkedin {
+  display: block;
+  background-image: url("../images/icons/linkedin.svg");
+  @include default-icon;
+}
+
+.ico-facebook {
+  display: block;
+  background-image: url("../images/icons/facebook.svg");
+  @include default-icon;
+}
+
+.ico-twitter {
+  display: block;
+  background-image: url("../images/icons/twitter.svg");
+  @include default-icon;
+}
