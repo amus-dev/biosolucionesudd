@@ -29,8 +29,7 @@
       padding-right: 20px;
       position: absolute;
       width: 100%;
-      padding-bottom: 30px;
-      padding-top: 30px;
+      padding: 10px;
       background: rgb(0, 0, 0);
       background: linear-gradient(
         0deg,
@@ -39,7 +38,6 @@
         rgba(0, 0, 0, 0.5214460784313726) 75%,
         rgba(0, 0, 0, 0) 100%
       );
-      min-height: 180px;
       .card__name {
         font-weight: 700;
         font-family: $Ubuntu;
