@@ -3,43 +3,48 @@
           <h2 class="team__title">Equipo Científico Clínico</h2>
           <div class="team__slide">
                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                         <div class="team__card">
-                              <div class="card__image" style="background-image: url(<?= get_template_directory_uri(); ?>/dist/img/card-cecilia.jpg);"></div>
-                              <div class="card__body">
-                                   <p class="card__name">Cecilia Poli, MD</p>
-                                   <p class="card__position">Directora  del Programa de Inmunogenética e Inmunología Traslacional ICIM UDD CAS</p>
+                    <?php $team_clinico = get_field("team_clinico"); ?>
+                    <?php foreach ($team_clinico as $index => $person) : ?>
+                         <div class="col-lg-3 col-md-6 col-sm-12">
+                              <a href="javascript:void(0)" id="teamClick" data-bs-toggle="modal" data-bs-target="#modal<?= $index; ?>">
+                                   <div class="team__card">
+                                        <div class="card__image" style="background-image: url(<?= $person["image"]["sizes"]["large"]; ?>"></div>
+                                        <div class="card__body">
+                                             <p class="card__name"><?= $person["name"]; ?></p>
+                                             <p class="card__position"><?= $person["cargo"]; ?></p>
+                                        </div>
+                                   </div>
+                              </a>
+                         </div>
+                         <!-- Modal -->
+                         <div class="modal fade modalTeam" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="modal<?= $index; ?>">
+                              <div class="modal-dialog modal-xl modal-dialog-centered">
+                                   <div class="modal-content">
+                                        <div class="modal-header">
+                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                             <div class="row">
+                                                  <div class="col-12 col-md-6">
+                                                       <img src="<?= $person["image"]["sizes"]["large"]; ?>" class="img-fluid modalTeam__image">
+                                                  </div>
+                                                  <div class="col-12 col-md-6 align-self-center">
+                                                       <h5 class="modalTeam__name" id="namePerson"><?= $person["name"]; ?></h5>
+                                                       <p class="modalTeam__cargo"><?= $person["cargo"]; ?></p>
+                                                  </div>
+                                                  <div class="col-12 mt-5">
+                                                       <div class="container">
+                                                            <div class="modalTeam__content">
+                                                                 <?= $person["information"]; ?>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
                               </div>
                          </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                         <div class="team__card">
-                              <div class="card__image" style="background-image: url(<?= get_template_directory_uri(); ?>/dist/img/card-gabriela.jpg);"></div>
-                              <div class="card__body">
-                                   <p class="card__name">Gabriela Repetto, MD</p>
-                                   <p class="card__position">Genetista y subespecialista en enfermedades Metabólicas Directora del Programa de Enfermedades poco Frecuentes ICIM UDD CAS</p>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                         <div class="team__card">
-                              <div class="card__image" style="background-image: url(<?= get_template_directory_uri(); ?>/dist/img/card-jose.jpg);"></div>
-                              <div class="card__body">
-                                   <p class="card__name">José Munita, MD </p>
-                                   <p class="card__position">Médico Cirujano, U. Andes. </p>
-                                   <p class="card__position">Director Programa Genética Microbiana y del Núcleo en Resistencia Microbiana ICIM UDD CAS</p>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                         <div class="team__card">
-                              <div class="card__image" style="background-image: url(<?= get_template_directory_uri(); ?>/dist/img/card-pablo.jpg);"></div>
-                              <div class="card__body">
-                                   <p class="card__name">Pablo Vial, MD</p>
-                                   <p class="card__position">Director Instituto de Ciencias e Innovación en Medicina (ICIM), Facultad de Medicina C. Alemana ICIM UDD CAS</p>
-                              </div>
-                         </div>
-                    </div>
+                    <?php endforeach; ?>
                </div>
           </div>
      </div>

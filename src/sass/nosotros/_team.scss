@@ -63,3 +63,34 @@
     }
   }
 }
+
+.modalTeam {
+  &__name {
+    font-weight: 700;
+    font-family: $Ubuntu;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  &__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__cargo {
+    font-weight: 700;
+    font-family: $Ubuntu;
+    margin-bottom: 1rem;
+  }
+  &__content {
+    font-family: $Ubuntu;
+    p {
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: circle;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
