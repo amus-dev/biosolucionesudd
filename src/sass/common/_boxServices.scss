@@ -18,15 +18,19 @@
       align-items: center;
     }
     &-title {
-      font-size: 1.5rem;
-      color: $gray;
-      font-family: $Ubuntu;
-      margin-bottom: 10px;
+      p {
+        font-size: 1.5rem;
+        color: $gray;
+        font-family: $Ubuntu;
+        margin-bottom: 10px;
+      }
     }
     &-description {
-      font-size: 1rem;
-      color: $gray;
-      font-family: $Ubuntu;
+      p {
+        font-size: 1rem;
+        color: $gray;
+        font-family: $Ubuntu;
+      }
     }
   }
 }

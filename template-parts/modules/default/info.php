@@ -8,7 +8,7 @@
                <div class="col-12 col-md-6">
                     <div class="boxServices__content">
                          <h1 class="boxServices__content-title"><?= $content['title']; ?></h1>
-                         <p class="boxServices__content-description"><?= $content['description']; ?></p>
+                         <div class="boxServices__content-description"><?= $content['description']; ?></div>
                     </div>
                </div>
           </div>
