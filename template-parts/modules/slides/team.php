@@ -11,7 +11,7 @@
                                         <div class="card__image" style="background-image: url(<?= $person["image"]["sizes"]["large"]; ?>"></div>
                                         <div class="card__body">
                                              <p class="card__name"><?= $person["name"]; ?></p>
-                                             <p class="card__position"><?= $person["cargo"]; ?></p>
+                                             <!-- <p class="card__position"><?= $person["cargo"]; ?></p> -->
                                         </div>
                                    </div>
                               </a>
